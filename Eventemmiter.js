@@ -4,7 +4,7 @@ class EventEmitter {
     constructor() {
         this.events={};
     }
-    on(evetnName, callback) {
+    on(eveName, callback) {
         if(this.events[evetnName]) {
             this.events[evetnName].push(callback);
         } else {
