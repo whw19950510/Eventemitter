@@ -4,15 +4,15 @@ class EventEmitter {
     constructor() {
         this.events={};
     }
-    on(eveName, callback) {
-        if(this.events[evetnName]) {
-            this.events[evetnName].push(callback);
+    on(eventName, callback) {
+        if(this.events[eventName]) {
+            this.events[eventName].push(callback);
         } else {
-            this.events[evetnName]=[callback];//create new events
+            this.events[eventName]=[callback];//create new events
         }
     }
-    trigger(eventname, ...rest) {
-        if(this.events[evetnName])
+    trigger(eventName, ...rest) {
+        if(this.events[eventName])
         {
             this.events[eventName].forEach(cb=>{
             cb.apply(null,rest)
